@@ -1,0 +1,48 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: ClusterServiceVersion
+metadata:
+  annotations:
+    alm-examples: '[]'
+    capabilities: Basic Install
+  name: test.v0.0.0
+  namespace: placeholder
+spec:
+  apiservicedefinitions: {}
+  customresourcedefinitions:
+    owned:
+    - description: Demo is the Schema for the demoes API
+      displayName: Demo
+      kind: Demo
+      name: demos.demo.operator-demo-go.io
+      version: v1beta1
+  description: Description
+  displayName: DisplayName
+  icon:
+  - base64data: ""
+    mediatype: ""
+  install:
+    spec:
+      deployments: null
+    strategy: ""
+  installModes:
+  - supported: false
+    type: OwnNamespace
+  - supported: false
+    type: SingleNamespace
+  - supported: false
+    type: MultiNamespace
+  - supported: true
+    type: AllNamespaces
+  keywords:
+  - keyword
+  links:
+  - name: Test
+    url: https://test.domain
+  maintainers:
+  - email: email1
+    name: name1
+  maturity: alpha
+  provider:
+    name: Provider
+    url: https://github.com/songleo/operator-demo-go
+  version: 0.0.0
